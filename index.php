@@ -1,5 +1,5 @@
 <?php
-    require "./vendor/autoload.php";
+    /*require "./vendor/autoload.php";
     $faker = Faker\Factory::create('uk_UA');
     $faker->name;
     $faker->address;
@@ -17,5 +17,14 @@
         echo "</tr>";
     }
     echo "</table>";
-    unset($value);
+    unset($value);*/
     //some code
+    include 'Discount.php';
+    include 'StaticDiscount.php';
+
+    $price = new Discount(20, 20);
+    $price->printInfo("на товар");
+    $price->getPrice();
+    unset($price);
+
+    $price = new StaticDiscount(20);
