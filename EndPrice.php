@@ -26,17 +26,12 @@ abstract class EndPrice
         if (gettype($price) == "double")
             $this->price = $price;
         else
-            $price = 0.0;
+            $this->$price = 0.0;
         $this->formulaPrice();
     }
 
     abstract protected function formulaPrice();
-
-    public function printInfo($typeDiscount)
-    {
-        echo "<br>Тип знижки: $typeDiscount";
-        echo "<br>Ціна товару: $this->price.<br>Знижка: $this->coef%.<br>До оплати: $this->newPrice";
-    }
+    abstract protected function printInfo($typeDiscount);
 
     public function getPrice() {
         return $this->newPrice;

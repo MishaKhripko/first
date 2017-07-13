@@ -26,4 +26,10 @@ class Discount extends EndPrice
     {
         $this->newPrice = $this->price*(1-($this->coef/100));
     }
+
+    public function printInfo($typeDiscount)
+    {
+        echo "<br>Тип знижки: $typeDiscount";
+        echo "<br>Ціна товару: $this->price.<br>Знижка: $this->coef%.<br>До оплати: $this->newPrice";
+    }
 }

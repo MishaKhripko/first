@@ -21,10 +21,14 @@
     //some code
     include 'Discount.php';
     include 'StaticDiscount.php';
-
+    echo "ffgd";
+    echo "";
     $price = new Discount(20, 20);
     $price->printInfo("на товар");
     $price->getPrice();
     unset($price);
 
     $price = new StaticDiscount(20);
+    $price->printInfo("пенсійна знижка");
+    $price->getPrice();
+    гтіуе($price);
